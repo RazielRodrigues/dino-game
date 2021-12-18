@@ -12,15 +12,11 @@ function handleKeyUp(event) {
 }
 
 function jump(){
-
     isJumping = true;
 
     let upInterval = setInterval(() => {
-
         if (position >= 150) {
-
             clearInterval(upInterval)
-    
             let downInterval = setInterval(() => {
                 if (position <= 0) {
                     clearInterval(downInterval)
@@ -30,13 +26,10 @@ function jump(){
                     dino.style.bottom = position + 'px';
                 }
             }, 20);
-    
         }else{
             position += 20;
             dino.style.bottom = position + 'px';
         }
-
-
     }, 20);
 
 }
@@ -53,7 +46,6 @@ function createCactus(){
     let leftInterval = setInterval(() => {
         cactusPosition -=10;
         cactus.style.left = cactusPosition + 'px';
-
         if (cactusPosition < -60) {
             clearInterval(leftInter);
             background.removeChild(cactus)
@@ -66,7 +58,6 @@ function createCactus(){
             cactusPosition -= 10
             cactus.style.left = cactusPosition + 'px';
         }
-
     }, 20);
 
     setTimeout(() => {

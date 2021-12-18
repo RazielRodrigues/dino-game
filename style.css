@@ -1,3 +1,12 @@
+@keyframes sliderRight {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+
 .dino{
     width: 60px;
     height: 60px;
@@ -19,15 +28,6 @@
     color: black;
     margin-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-@keyframes sliderRight {
-    from {
-        background-position: 70000%;
-    }
-    to {
-        background-position: 0;
-    }
 }
 
 .background{
