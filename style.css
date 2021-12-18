@@ -23,19 +23,19 @@
     bottom: 0;
 }
 
-.game-over{
+h1.game-over{
     text-align: center;
-    color: black;
+    color: grey;
     margin-top: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    font: sans-serif 50;
 }
 
 .background{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-image: url('background.png');
     background-repeat: repeat-x;
-    animation: sliderRight 680s infinite linear;
+    animation: sliderRight 680s infinite forwards;
     width: 100%;
     height: 200px;
 }

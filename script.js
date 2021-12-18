@@ -47,18 +47,19 @@ function createCactus(){
         cactusPosition -=10;
         cactus.style.left = cactusPosition + 'px';
         if (cactusPosition < -60) {
-            clearInterval(leftInter);
+            clearInterval(leftInterval);
             background.removeChild(cactus)
         }else if(cactusPosition > 0 && cactusPosition < 60 && position < 60){
-            clearInterval(leftInterval);
-            const gameover = document.createElement('p');        
+            const gameover = document.createElement('h1');        
             gameover.classList.add('game-over')
-            document.body.innerHTML = "fim de jogo!";
+            gameover.innerHTML = "Fim de jogo!"
+            background.replaceWith(gameover);
+            clearInterval(leftInterval);
         }else{
             cactusPosition -= 10
             cactus.style.left = cactusPosition + 'px';
         }
-    }, 20);
+    }, 30);
 
     setTimeout(() => {
         createCactus()
