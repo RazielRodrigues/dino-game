@@ -59,6 +59,8 @@ function createCactus(){
             background.removeChild(cactus)
         }else if(cactusPosition > 0 && cactusPosition < 60 && position < 60){
             clearInterval(leftInterval);
+            const gameover = document.createElement('p');        
+            gameover.classList.add('game-over')
             document.body.innerHTML = "fim de jogo!";
         }else{
             cactusPosition -= 10
